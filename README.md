@@ -26,7 +26,6 @@ Evaluate the impact of compression and resizing on visual quality and file size,
 In the `screenshots/` folder you will find screenshots showing the parameters used in Photoshop for image compression and cropping.
 
 - ![Photoshop Compression](screenshots/compressao_photoshop.png)
-- ![Photoshop Crop](screenshots/crop_photoshop.png)
 
 ---
 
