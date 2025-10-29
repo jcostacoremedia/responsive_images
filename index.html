@@ -25,7 +25,6 @@
       }
       .img-container {
         flex: 1 1 45%;
-        max-width: 600px;
       }
       img {
         object-fit: cover;
@@ -40,7 +39,6 @@
         border-collapse: collapse;
         margin: 30px auto;
         width: 95%;
-        max-width: 1000px;
       }
       table,
       th,
@@ -79,62 +77,81 @@
         ratio1x1: {
           title: "Responsive Image Comparison – 1:1 Ratio",
           aspect: "1 / 1",
-          width: 555,
-          urlBaseHQ:
+          delivered: "555x555",
+          deliveredBig: "1110x1110",
+          urlHQ:
             "https://preview.cm23.coremedia.training/resource/image/13830/portrait_ratio1x1/555/555/45ee0a388c4e073937b2f928e0d26644/96388A654153DEB8C363BF216BEA30EE/",
-          urlBaseFuzzy:
+          urlFuzzy:
             "https://preview.cm23.coremedia.training/resource/image/13944/portrait_ratio1x1/555/555/84268577338b93be7cd966d263f439a5/FF22BF2DC04656632F9A521EF8D85A5A/",
-          urlBaseHQBig:
-            "https://preview.cm23.coremedia.training/resource/blob/13830/077b8804e24126116cfbff9bed2d51a0/img2-originalimage-data.jpg",
-          urlBaseFuzzyBig: "https://preview.cm23.coremedia.training/resource/blob/13944/6f042fb83e5a6d9f0347382b6e45a8d5/img3-fuzzymedium30-data.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/portrait_ratio1x1/1110/1110/556892a2d35e0401ac9cdcd32a7b0c91/70ED4402E2774D920BF7F19C4056BD5A/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/13944/portrait_ratio1x1/1110/1110/1cbf0366150a5340f7e419342d41a730/57E9F6E6E5CE2586C33F6581E443FDCE/img3-fuzzymedium30.jpg",
           metrics: {
-            serverHQ: { size: 70.2, time: 390 },
-            serverFuzzy: { size: 70.6, time: 390 },
+            HQ: { size: 70.0, time: 190 },
+            Fuzzy: { size: 70.5, time: 290 },
+            BigHQ: { size: 257, time: 347 },
+            BigFuzzy: { size: 248, time: 347 },
           },
         },
         ratio4x3: {
           title: "Responsive Image Comparison – 4:3 Ratio",
           aspect: "4 / 3",
-          width: 1200,
-          urlBaseHQ:
+          delivered: "1200x905",
+          deliveredBig: "2400x1810",
+          urlHQ:
             "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio4x3/1200/905/7babfad3e42bc66382514636b6a1b4d8/0372C14D05B620841E8AF33B14F08ACE/",
-          urlBaseFuzzy:
+          urlFuzzy:
             "https://preview.cm23.coremedia.training/resource/image/13944/landscape_ratio4x3/1200/905/f10c7a73d870d3e4e4daee9a3e9125ba/CCED27B5A64DD6F28ED29868A53DF9D0/",
-          urlBaseHQBig: "https://preview.cm23.coremedia.training/resource/blob/13830/077b8804e24126116cfbff9bed2d51a0/img2-originalimage-data.jpg",
-          urlBaseFuzzyBig: "https://preview.cm23.coremedia.training/resource/blob/13944/6f042fb83e5a6d9f0347382b6e45a8d5/img3-fuzzymedium30-data.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio4x3/2400/1810/f4773950e8e7f8edc7a3fa46a8b1c754/E297C90306A4298031550F5A13425C71/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/13944/landscape_ratio4x3/2400/1810/ceafbfcad12e175066efd6d8031b8857/C1E4F23B598BF917AED60DFE26892A3C/img3-fuzzymedium30.jpg",
           metrics: {
-            serverHQ: { size: 243, time: 497 },
-            serverFuzzy: { size: 236, time: 496 },
+            HQ: { size: 243, time: 497 },
+            Fuzzy: { size: 236, time: 453 },
+            BigHQ: { size: 662, time: 472 },
+            BigFuzzy: { size: 625, time: 475 },
           },
         },
         ratio8x3: {
           title: "Responsive Image Comparison – 8:3 Ratio",
           aspect: "8 / 3",
-          width: 1144,
-          urlBaseHQ:
+          delivered: "1144x429",
+          deliveredBig: "2288x858",
+          urlHQ:
             "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio8x3/1144/429/b2a242af606b9e38ad2970a4ae03c011/FA454C0204C0AE82F11E6589AAC5145E/",
-          urlBaseFuzzy:
+          urlFuzzy:
             "https://preview.cm23.coremedia.training/resource/image/13944/landscape_ratio8x3/1144/429/6a612cd3e9e10b77ad620e7dfc934f0/2E0D1467585B32EED7ABBF0CE8593DD5/",
-          urlBaseHQBig: "https://preview.cm23.coremedia.training/resource/blob/13830/077b8804e24126116cfbff9bed2d51a0/img2-originalimage-data.jpg",
-          urlBaseFuzzyBig: "https://preview.cm23.coremedia.training/resource/blob/13944/6f042fb83e5a6d9f0347382b6e45a8d5/img3-fuzzymedium30-data.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio8x3/2280/858/989e9d58ce5b997627d6a2f104b359e9/E829FBB9B9258C878B624B855FA74FB2/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/13944/landscape_ratio8x3/2280/858/612cddfbcf07b9e242dec54ab1d3d9f8/2D67767F055F3C6B1D775D0C5778DBAF/img3-fuzzymedium30.jpg",
           metrics: {
-            serverHQ: { size: 106, time: 354 },
-            serverFuzzy: { size: 107, time: 394 },
+            HQ: { size: 106, time: 448 },
+            Fuzzy: { size: 107, time: 327 },
+            BigHQ: { size: 399, time: 416 },
+            BigFuzzy: { size: 387, time: 414 },
           },
         },
         ratio16x9: {
           title: "Responsive Image Comparison – 16:9 Ratio",
           aspect: "16 / 9",
-          width: 1200,
-          urlBaseHQ:
+          delivered: "1200x675",
+          deliveredBig: "2400x1350",
+          urlHQ:
             "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio16x9/1200/675/35526ba9c879ffbd5b845bbf48e8481/3CE5F6DDB2D7257304658A0619F68186/",
-          urlBaseFuzzy:
+          urlFuzzy:
             "https://preview.cm23.coremedia.training/resource/image/13944/landscape_ratio16x9/1200/675/59b9f675ed537a5949da1aa76ad79342/536E067A101E0B652EEFBD4247CD947F/",
-          urlBaseHQBig: "https://preview.cm23.coremedia.training/resource/blob/13830/077b8804e24126116cfbff9bed2d51a0/img2-originalimage-data.jpg",
-          urlBaseFuzzyBig: "https://preview.cm23.coremedia.training/resource/blob/13944/6f042fb83e5a6d9f0347382b6e45a8d5/img3-fuzzymedium30-data.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio16x9/2400/1350/4d4698af6c3c15ac261d8c73b029e72b/46976A7AF291DC3F5E8B815C02171F66/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/13944/landscape_ratio16x9/2400/1350/6d557ba25943ffcc290220074b735538/2FB7AC2FA1108BE662FFE648450535E9/img3-fuzzymedium30.jpg",
           metrics: {
-            serverHQ: { size: 164, time: 377 },
-            serverFuzzy: { size: 166, time: 376 },
+            HQ: { size: 164, time: 382 },
+            Fuzzy: { size: 165, time: 383 },
+            BigHQ: { size: 556, time: 459 },
+            BigFuzzy: { size: 530, time: 464 },
           },
         },
       };
@@ -146,47 +163,80 @@
 
         const t = tests[val];
         const content = document.getElementById("content");
+
         content.innerHTML = `
-          <style>
-            img { aspect-ratio: ${t.aspect}; }
-          </style>
+      <style> img { aspect-ratio: ${t.aspect}; } </style>
 
-          <h2>${t.title}</h2>
+      <h3>Results Summary</h3>
+                <h3 style="color:red;">You can adjust the screen size to fill the "Rendered" column of the table.</h3>
 
-          <div class="comparison-row">
-            <div class="img-container">
-              <h3>CAE Server Scaling (High Quality)</h3>
-              <img src="${t.urlBaseHQ}img2-originalimage.jpg" width="${t.width}">
-            </div>
-            <div class="img-container">
-              <h3>Browser Downscale (Original Size)</h3>
-              <img src="${t.urlBaseHQBig}" width="${t.width}">
-            </div>
-          </div>
+      <table id="resultsTable">
+        <tr>
+          <th>Version</th><th>Type</th><th>Delivered</th><th>Rendered</th>
+          <th>File Size (KB)</th><th>Load Time (ms)</th><th>Notes</th>
+        </tr>
+        <tr id="rowHQ"><td>High Quality</td><td>CAE  Scaling</td>
+          <td>${t.delivered}</td><td class="renderHQ">-</td>
+          <td>${t.metrics.HQ.size}</td><td>${t.metrics.HQ.time}</td><td>-</td></tr>
+        <tr id="rowHQBig"><td>High Quality</td><td>Browser Downscale</td>
+          <td>${t.deliveredBig} → ${t.delivered}</td><td class="renderHQBig">-</td>
+          <td>${t.metrics.BigHQ.size}</td><td>${t.metrics.BigHQ.time}</td><td>-</td></tr>
+        <tr id="rowFuzzy"><td>Fuzzy (30%)</td><td>CAE  Scaling</td>
+          <td>${t.delivered}</td><td class="renderFuzzy">-</td>
+          <td>${t.metrics.Fuzzy.size}</td><td>${t.metrics.Fuzzy.time}</td><td>-</td></tr>
+        <tr id="rowFuzzyBig"><td>Fuzzy (30%)</td><td>Browser Downscale</td>
+          <td>${t.deliveredBig} → ${t.delivered}</td><td class="renderFuzzyBig">-</td>
+          <td>${t.metrics.BigFuzzy.size}</td><td>${t.metrics.BigFuzzy.time}</td><td>-</td></tr>
+      </table>
+      <h2>${t.title}</h2>
 
-          <div class="comparison-row">
-            <div class="img-container">
-              <h3>CAE Server Scaling (Fuzzy / Compressed)</h3>
-              <img src="${t.urlBaseFuzzy}img3-fuzzymedium30.jpg" width="${t.width}">
-            </div>
-            <div class="img-container">
-              <h3>Browser Downscale (Fuzzy / Compressed)</h3>
-              <img src="${t.urlBaseFuzzyBig}" width="${t.width}">
-            </div>
-          </div>
+      <div class="comparison-row">
+        <div class="img-container">
+          <h3>CAE  Scaling (High Quality)</h3>
+          <img id="hq" src="${t.urlHQ}img2-originalimage.jpg">
+        </div>
+        <div class="img-container">
+          <h3>Browser Downscale (High Quality) => Double Size</h3>
+          <img id="hqBig" src="${t.urlHQBig}">
+        </div>
+      </div>
 
-          <h3>Results Summary</h3>
-          <table>
-            <tr><th>Version</th><th>Type</th><th>Delivered</th><th>Rendered</th><th>File Size (KB)</th><th>Load Time (ms)</th><th>Notes</th></tr>
-            <tr><td>High Quality</td><td>CAE Server Scaling</td><td>${t.width}×${t.width}</td><td>${t.width}×${t.width}</td><td>${t.metrics.serverHQ.size}</td><td>${t.metrics.serverHQ.time}</td><td>-</td></tr>
-            <tr><td>High Quality</td><td>Browser Downscale</td><td>(maior imagem)</td><td>${t.width}×${t.width}</td><td>${t.metrics.serverHQ.size}</td><td>${t.metrics.serverHQ.time}</td><td>-</td></tr>
-            <tr><td>Fuzzy (30%)</td><td>CAE Server Scaling</td><td>${t.width}×${t.width}</td><td>${t.width}×${t.width}</td><td>${t.metrics.serverFuzzy.size}</td><td>${t.metrics.serverFuzzy.time}</td><td>-</td></tr>
-            <tr><td>Fuzzy (30%)</td><td>Browser Downscale</td><td>(maior imagem)</td><td>${t.width}×${t.width}</td><td>${t.metrics.serverFuzzy.size}</td><td>${t.metrics.serverFuzzy.time}</td><td>-</td></tr>
-          </table>
-        `;
+      <div class="comparison-row">
+        <div class="img-container">
+          <h3>CAE  Scaling (Fuzzy / Compressed)</h3>
+          <img id="fuzzy" src="${t.urlFuzzy}img3-fuzzymedium30.jpg">
+        </div>
+        <div class="img-container">
+          <h3>Browser Downscale (Fuzzy / Compressed) => Double Size</h3>
+          <img id="fuzzyBig" src="${t.urlFuzzyBig}">
+        </div>
+      </div>
+
+    `;
+
+        updateRenderedSizes();
+        window.addEventListener("resize", updateRenderedSizes);
       }
 
-      // Mostra 1:1 por padrão ao carregar
+      function updateRenderedSizes() {
+        const imgs = {
+          renderHQ: document.getElementById("hq"),
+          renderHQBig: document.getElementById("hqBig"),
+          renderFuzzy: document.getElementById("fuzzy"),
+          renderFuzzyBig: document.getElementById("fuzzyBig"),
+        };
+
+        for (const key in imgs) {
+          const img = imgs[key];
+          if (img && img.complete) {
+            const cell = document.querySelector(`.${key}`);
+            if (cell) {
+              cell.textContent = `${img.clientWidth}×${img.clientHeight}`;
+            }
+          }
+        }
+      }
+
       window.onload = () => showRatio("ratio1x1");
     </script>
   </body>
