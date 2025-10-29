@@ -1,5 +1,3 @@
-# responsive_images
-
 ## Fuzzy Responsive Images
 
 This repository contains tests comparing images exported directly from **CoreMedia Studio** using different compression levels and dimensions.  
