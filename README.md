@@ -24,7 +24,7 @@ The main test page (`index.html`) includes 4 Ratios with:
 
 **CoreMedia Studio**:
 - Repository with frontend files
-- https://github.com/jcostacoremedia/responsive_images
+- https://github.com/jcostacoremedia/Frontend-development
 
 Two teasers were created — each configured with a specific test image (HQ or Fuzzy).
 - ![Teaser](screenshots/teaser-hq.png)
