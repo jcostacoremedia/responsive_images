@@ -25,15 +25,18 @@
       }
       .img-container {
         flex: 1 1 45%;
+        text-align: center;
       }
-      img {
-        object-fit: cover;
-        image-rendering: crisp-edges;
+      .img-container img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
         border: 1px solid #ccc;
         border-radius: 6px;
         display: block;
         margin: 0 auto;
-        width: 100%;
+        object-fit: cover;
+        image-rendering: crisp-edges;
       }
       table {
         border-collapse: collapse;
@@ -158,17 +161,23 @@
 
       function showRatio(forceVal = null) {
         const val =
-          forceVal || document.getElementById("ratioSelect").value || "ratio1x1";
+          forceVal ||
+          document.getElementById("ratioSelect").value ||
+          "ratio1x1";
         document.getElementById("ratioSelect").value = val;
 
         const t = tests[val];
         const content = document.getElementById("content");
 
+        const [w, h] = t.delivered.split("x").map(Number);
+
         content.innerHTML = `
-      <style> img { aspect-ratio: ${t.aspect}; } </style>
+      <style>
+        img { aspect-ratio: ${t.aspect}; }
+      </style>
 
       <h3>Results Summary</h3>
-                <h3 style="color:red;">You can adjust the screen size to fill the "Rendered" column of the table.</h3>
+      <h3 style="color:red;">Rendered column now fixed to delivered pixel dimensions (${t.delivered})</h3>
 
       <table id="resultsTable">
         <tr>
@@ -211,8 +220,12 @@
           <img id="fuzzyBig" src="${t.urlFuzzyBig}">
         </div>
       </div>
-
     `;
+
+        // Set fixed max-widths dynamically
+        document.querySelectorAll(".img-container img").forEach((img) => {
+          img.style.maxWidth = `${w}px`;
+        });
 
         updateRenderedSizes();
         window.addEventListener("resize", updateRenderedSizes);
@@ -241,4 +254,3 @@
     </script>
   </body>
 </html>
-
