@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CoreMedia Responsive Image Comparison</title>
+    <h2>CoreMedia Responsive Image Comparison</h2>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fafafa;
+        padding: 50px;
+        text-align: center;
+      }
+      select {
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        margin-bottom: 30px;
+      }
+      .comparison-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+      .img-container {
+        flex: 1 1 45%;
+        text-align: center;
+      }
+      .img-container img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        image-rendering: crisp-edges;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 30px auto;
+        width: 95%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #999;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+      }
+      h2 {
+        margin-top: 50px;
+        color: #444;
+      }
+      h3 {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OSX Default Compression</h1>
+    <p>Select a ratio below to view all related comparisons:</p>
+
+    <select id="ratioSelect" onchange="showRatio()">
+      <option value="ratio1x1">1:1 (Portrait)</option>
+      <option value="ratio4x3">4:3 (Standard)</option>
+      <option value="ratio8x3">8:3 (Wide)</option>
+      <option value="ratio16x9">16:9 (Landscape)</option>
+    </select>
+
+    <div id="content"></div>
+
+    <script>
+      const tests = {
+        ratio1x1: {
+          title: "Responsive Image Comparison – 1:1 Ratio",
+          aspect: "1 / 1",
+          delivered: "555x555",
+          deliveredBig: "1110x1110",
+          urlHQ:
+            "https://preview.cm23.coremedia.training/resource/image/13830/portrait_ratio1x1/555/555/45ee0a388c4e073937b2f928e0d26644/96388A654153DEB8C363BF216BEA30EE/",
+          urlFuzzy:
+            "https://preview.cm23.coremedia.training/resource/image/18448/portrait_ratio1x1/555/555/645a04c5386f3c18011cd21d1d7a5184/FFFBB906DB47B3F18C1A3F932CF74C8E/img-previewcompression.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/portrait_ratio1x1/1110/1110/556892a2d35e0401ac9cdcd32a7b0c91/70ED4402E2774D920BF7F19C4056BD5A/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/18448/portrait_ratio1x1/1110/1110/95154ad2439305b878f8b01fd36af2d7/F22414D36135B94AD7B055949C72E03C/img-previewcompression.jpg",
+          metrics: {
+            HQ: { size: 70.1, time: 340 },
+            Fuzzy: { size: 66.1, time: 286 },
+            BigHQ: { size: 257, time: 340 },
+            BigFuzzy: { size: 210, time: 339 },
+          },
+        },
+        ratio4x3: {
+          title: "Responsive Image Comparison – 4:3 Ratio",
+          aspect: "4 / 3",
+          delivered: "1200x905",
+          deliveredBig: "2400x1810",
+          urlHQ:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio4x3/1200/905/7babfad3e42bc66382514636b6a1b4d8/0372C14D05B620841E8AF33B14F08ACE/",
+          urlFuzzy:
+            "https://preview.cm23.coremedia.training/resource/image/18448/landscape_ratio4x3/1200/905/9b92d2d22e731eb9bf824a74e2f287f9/D74C85731CC9B0E0444185700076F9F7/img-previewcompression.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio4x3/2400/1810/f4773950e8e7f8edc7a3fa46a8b1c754/E297C90306A4298031550F5A13425C71/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/18448/landscape_ratio4x3/2400/1810/82187a214a87f2b79b91a42729538dd6/72608F3C4B83B62CC8E5C38E9D64D5AE/img-previewcompression.jpg",
+          metrics: {
+            HQ: { size: 243, time: 343 },
+            Fuzzy: { size: 202, time: 341 },
+            BigHQ: { size: 662, time: 408 },
+            BigFuzzy: { size: 503, time: 402 },
+          },
+        },
+        ratio8x3: {
+          title: "Responsive Image Comparison – 8:3 Ratio",
+          aspect: "8 / 3",
+          delivered: "1144x429",
+          deliveredBig: "2288x858",
+          urlHQ:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio8x3/1144/429/b2a242af606b9e38ad2970a4ae03c011/FA454C0204C0AE82F11E6589AAC5145E/",
+          urlFuzzy:
+            "https://preview.cm23.coremedia.training/resource/image/18448/landscape_ratio8x3/1144/429/6a8cd34341acc14575fd6ac1631f203b/A1CF5A6F84F1D14B936911EB3C384FB3/img-previewcompression.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio8x3/2280/858/989e9d58ce5b997627d6a2f104b359e9/E829FBB9B9258C878B624B855FA74FB2/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/18448/landscape_ratio8x3/2280/858/a2ed336595758cc1d4711f66a515c63a/61264DB2E7EB6DDA4C2DE48DC0906BDC/img-previewcompression.jpg",
+          metrics: {
+            HQ: { size: 106, time: 212 },
+            Fuzzy: { size: 99.7, time: 332 },
+            BigHQ: { size: 399, time: 371 },
+            BigFuzzy: { size: 323, time: 371 },
+          },
+        },
+        ratio16x9: {
+          title: "Responsive Image Comparison – 16:9 Ratio",
+          aspect: "16 / 9",
+          delivered: "1200x675",
+          deliveredBig: "2400x1350",
+          urlHQ:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio16x9/1200/675/35526ba9c879ffbd5b845bbf48e8481/3CE5F6DDB2D7257304658A0619F68186/",
+          urlFuzzy:
+            "https://preview.cm23.coremedia.training/resource/image/18448/landscape_ratio16x9/1200/675/ccbef525eb872fc7a68d58bd9e5f3fea/E49C8143D3005918EF49661FE45E28BC/img-previewcompression.jpg",
+          urlHQBig:
+            "https://preview.cm23.coremedia.training/resource/image/13830/landscape_ratio16x9/2400/1350/4d4698af6c3c15ac261d8c73b029e72b/46976A7AF291DC3F5E8B815C02171F66/img2-originalimage.jpg",
+          urlFuzzyBig:
+            "https://preview.cm23.coremedia.training/resource/image/18448/landscape_ratio16x9/2400/1350/6933c9da8b86a5ebb1d327a355ab3302/3B56912B90CC59FCC1D9C8EDA0913A37/img-previewcompression.jpg",
+          metrics: {
+            HQ: { size: 164, time: 280 },
+            Fuzzy: { size: 151, time: 325 },
+            BigHQ: { size: 556, time: 389 },
+            BigFuzzy: { size: 433, time: 391 },
+          },
+        },
+      };
+
+      function showRatio(forceVal = null) {
+        const val =
+          forceVal ||
+          document.getElementById("ratioSelect").value ||
+          "ratio1x1";
+        document.getElementById("ratioSelect").value = val;
+
+        const t = tests[val];
+        const content = document.getElementById("content");
+
+        const [w, h] = t.delivered.split("x").map(Number);
+
+        content.innerHTML = `
+      <style>
+        img { aspect-ratio: ${t.aspect}; }
+      </style>
+
+      <h3>Results Summary</h3>
+      <h3 style="color:red;">Rendered column now fixed to delivered pixel dimensions (${t.delivered})</h3>
+
+      <table id="resultsTable">
+        <tr>
+          <th>Version</th><th>Type</th><th>Delivered</th><th>Rendered</th>
+          <th>File Size (KB)</th><th>Load Time (ms)</th><th>Notes</th>
+        </tr>
+        <tr id="rowHQ"><td>High Quality</td><td>CAE  Scaling</td>
+          <td>${t.delivered}</td><td class="renderHQ">-</td>
+          <td>${t.metrics.HQ.size}</td><td>${t.metrics.HQ.time}</td><td>-</td></tr>
+        <tr id="rowHQBig"><td>High Quality</td><td>Browser Downscale</td>
+          <td>${t.deliveredBig} → ${t.delivered}</td><td class="renderHQBig">-</td>
+          <td>${t.metrics.BigHQ.size}</td><td>${t.metrics.BigHQ.time}</td><td>-</td></tr>
+        <tr id="rowFuzzy"><td>OSX_Compression(MAX)</td><td>CAE  Scaling</td>
+          <td>${t.delivered}</td><td class="renderFuzzy">-</td>
+          <td>${t.metrics.Fuzzy.size}</td><td>${t.metrics.Fuzzy.time}</td><td>-</td></tr>
+        <tr id="rowFuzzyBig"><td>OSX_Compression(MAX)</td><td>Browser Downscale</td>
+          <td>${t.deliveredBig} → ${t.delivered}</td><td class="renderFuzzyBig">-</td>
+          <td>${t.metrics.BigFuzzy.size}</td><td>${t.metrics.BigFuzzy.time}</td><td>-</td></tr>
+      </table>
+      <h2>${t.title}</h2>
+
+      <div class="comparison-row">
+        <div class="img-container">
+          <h3>CAE  Scaling (High Quality)</h3>
+          <img id="hq" src="${t.urlHQ}img2-originalimage.jpg">
+        </div>
+        <div class="img-container">
+          <h3>Browser Downscale (High Quality) => Double Size</h3>
+          <img id="hqBig" src="${t.urlHQBig}">
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <div class="img-container">
+          <h3>CAE  Scaling (OSX_Preview / Compressed)</h3>
+          <img id="fuzzy" src="${t.urlFuzzy}">
+        </div>
+        <div class="img-container">
+          <h3>Browser Downscale (OSX_Preview / Compressed) => Double Size</h3>
+          <img id="fuzzyBig" src="${t.urlFuzzyBig}">
+        </div>
+      </div>
+    `;
+
+        // Set fixed max-widths dynamically
+        document.querySelectorAll(".img-container img").forEach((img) => {
+          img.style.maxWidth = `${w}px`;
+        });
+
+        updateRenderedSizes();
+        window.addEventListener("resize", updateRenderedSizes);
+      }
+
+      function updateRenderedSizes() {
+        const imgs = {
+          renderHQ: document.getElementById("hq"),
+          renderHQBig: document.getElementById("hqBig"),
+          renderFuzzy: document.getElementById("fuzzy"),
+          renderFuzzyBig: document.getElementById("fuzzyBig"),
+        };
+
+        for (const key in imgs) {
+          const img = imgs[key];
+          if (img && img.complete) {
+            const cell = document.querySelector(`.${key}`);
+            if (cell) {
+              cell.textContent = `${img.clientWidth}×${img.clientHeight}`;
+            }
+          }
+        }
+      }
+
+      window.onload = () => showRatio("ratio1x1");
+    </script>
+  </body>
+</html>
