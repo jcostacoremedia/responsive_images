@@ -11,39 +11,24 @@ Evaluate the **impact of compression, resizing, and scaling** on both **visual q
 
 ---
 
-
 #### 🧩 HTML-Based Comparison
 
-The main test page (`index.html`) includes 4 Ratios with:
-- **2 HQ images** — one at normal resolution and one delivered at **2× size**.  
-- **2 Fuzzy images** — one at normal resolution and one delivered at **2× size**.  
+The main test page (`index_photoshop_compression.html`) includes 4 Ratios with:
+
+- **2 HQ images** — one at normal resolution and one delivered at **2× size**.
+- **2 Fuzzy images** — one at normal resolution and one delivered at **2× size**.
 - These combinations are used to evaluate **downscaling effects**.
 
 ---
 
+#### 🧩 Creation 2 More Index files
 
-**CoreMedia Studio**:
-- Repository with frontend files
-- https://github.com/jcostacoremedia/Frontend-development
+- (`index_OSX_compression.html`) - uses images compressed with the default macOS compression.
+- (`index_Blur_OSX_compression.html`) - uses the same images, also compressed with macOS, but with an additional Gaussian Blur filter applied in Photoshop.
 
 Two teasers were created — each configured with a specific test image (HQ or Fuzzy).
-- ![Teaser](screenshots/teaser-hq.png)
-- ![Teaser](screenshots/teaser-fuzzy.png)
 
-These teasers were added to a **custom test page** for live comparison.
-- ![Page](screenshots/page-with-layout.png)
-
-A **layout variant** was created to provide a tailored visual structure inside the CAE preview environment.
-- ![Teaser](screenshots/layout-variant.png)
-
-The layout is **accessible through the local CoreMedia test environment**, allowing responsive and rendering tests directly in preview.
-- ![Teaser](screenshots/Container_jorgeTestLayout.ftl.png)
-- ![Teaser](screenshots/CMTeasable.asjorgeTestLayout.ftl.png)
-
-
-
-
-
+- ![Tabel](screenshots/tabel.png)
 
 **Author:** Jorge Costa  
 Frontend Developer — CoreMedia Test Environment
