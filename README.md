@@ -26,8 +26,6 @@ The main test page (`index_photoshop_compression.html`) includes 4 Ratios with:
 - (`index_OSX_compression.html`) - uses images compressed with the default macOS compression.
 - (`index_Blur_OSX_compression.html`) - uses the same images, also compressed with macOS, but with an additional Gaussian Blur filter applied in Photoshop.
 
-Two teasers were created — each configured with a specific test image (HQ or Fuzzy).
-
 - ![Tabel](screenshots/tabel.png)
 
 **Author:** Jorge Costa  
